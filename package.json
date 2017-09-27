@@ -47,7 +47,9 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "lint": "eslint Examples/ Libraries/",
-    "start": "./packager/packager.sh || true"
+    "start": "./packager/packager.sh || true",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bin": {
     "react-native": "local-cli/wrong-react-native.js"
@@ -59,7 +61,7 @@
     "babel-core": "^5.8.23",
     "bser": "^1.0.2",
     "chalk": "^1.1.1",
-    "connect": "^2.8.3",
+    "connect": "^3.6.5",
     "debug": "^2.2.0",
     "event-target-shim": "^1.0.5",
     "fbjs-haste": "^0.3.2",
@@ -90,7 +92,8 @@
     "ws": "^0.8.0",
     "yargs": "^3.24.0",
     "yeoman-environment": "^1.2.7",
-    "yeoman-generator": "^0.20.3"
+    "yeoman-generator": "^0.20.3",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "jest-cli": "0.7.1",
@@ -99,5 +102,6 @@
     "eslint-plugin-react": "3.3.1",
     "portfinder": "0.4.0",
     "temp": "0.8.3"
-  }
+  },
+  "snyk": true
 }
