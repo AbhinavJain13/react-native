@@ -79,7 +79,7 @@
     "react-timer-mixin": "^0.13.2",
     "rebound": "^0.0.13",
     "regenerator": "^0.8.36",
-    "sane": "^1.2.0",
+    "sane": "^2.5.0",
     "semver": "^5.0.1",
     "source-map": "^0.4.4",
     "stacktrace-parser": "^0.1.3",
