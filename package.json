@@ -47,7 +47,9 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "lint": "eslint Examples/ Libraries/",
-    "start": "./packager/packager.sh || true"
+    "start": "./packager/packager.sh || true",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "bin": {
     "react-native": "local-cli/wrong-react-native.js"
@@ -55,15 +57,15 @@
   "dependencies": {
     "absolute-path": "^0.0.0",
     "art": "^0.10.0",
-    "babel": "^5.8.23",
-    "babel-core": "^5.8.23",
+    "babel": "^6.0.0",
+    "babel-core": "^6.9.0",
     "bser": "^1.0.2",
     "chalk": "^1.1.1",
     "connect": "^2.8.3",
     "debug": "^2.2.0",
     "event-target-shim": "^1.0.5",
     "fbjs-haste": "^0.3.2",
-    "fbjs-scripts": "^0.3.0",
+    "fbjs-scripts": "^0.7.0",
     "graceful-fs": "^4.1.2",
     "image-size": "^0.3.5",
     "immutable": "^3.7.5",
@@ -90,7 +92,8 @@
     "ws": "^0.8.0",
     "yargs": "^3.24.0",
     "yeoman-environment": "^1.2.7",
-    "yeoman-generator": "^0.20.3"
+    "yeoman-generator": "^0.23.0",
+    "snyk": "^1.88.1"
   },
   "devDependencies": {
     "jest-cli": "0.7.1",
@@ -99,5 +102,6 @@
     "eslint-plugin-react": "3.3.1",
     "portfinder": "0.4.0",
     "temp": "0.8.3"
-  }
+  },
+  "snyk": true
 }
